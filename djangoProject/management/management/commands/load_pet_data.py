@@ -37,26 +37,26 @@ class Command(BaseCommand):
             return
         print("Creating vaccine data")
         for vaccine_name in VACCINES_NAMES:
-            vac = Vaccine(_name=vaccine_name)
+            vac = Vaccine(name=vaccine_name)
             vac.save()
         print("Loading pet data for pets available for adoption")
         for row in DictReader(open('./pet_data.csv')):
             pet = Pet()
-            pet._name = row['Pet']
-            pet._submitter = row['Submitter']
-            pet._species = row['Species']
-            pet._breed = row['Breed']
-            pet._description = row['Pet Description']
-            pet._sex = row['Sex']
-            pet._age = row['Age']
+            pet.name = row['Pet']
+            pet.submitter = row['Submitter']
+            pet.species = row['Species']
+            pet.breed = row['Breed']
+            pet.description = row['Pet Description']
+            pet.sex = row['Sex']
+            pet.age = row['Age']
             raw_submission_date = row['submission date']
             submission_date = UTC.localize(
                 datetime.strptime(raw_submission_date, DATETIME_FORMAT))
-            pet._submissionDate = submission_date
+            pet.submissionDate = submission_date
             pet.save()
             raw_vaccination_names = row['vaccinations']
             vaccination_names = [name for name in raw_vaccination_names.split('| ') if name]
             for vac_name in vaccination_names:
-                vac = Vaccine.objects.get(_name=vac_name)
-                pet._vaccinations.add(vac)
+                vac = Vaccine.objects.get(name=vac_name)
+                pet.vaccinations.add(vac)
             pet.save()
