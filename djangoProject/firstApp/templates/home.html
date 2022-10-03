@@ -1,12 +1,8 @@
-<!DOCTYPE html>
+{%extends "base.html"%}
 
-<head>
-    <title>Pet Home</title>
-</head>
+{%block title%}Home Page{%endblock%}
 
-<body> 
-    <h1>My Pet Adoption Agency</h1>
-</body>
+{%block content%}
 
 <ul>
     {% for pet in pets %}
@@ -16,4 +12,4 @@
     {% endfor %}
 </ul>
 
-</html>
+{%endblock%}
