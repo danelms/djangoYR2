@@ -1,0 +1,70 @@
+*
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 3.5vw;
+}
+
+body
+{
+    width: 80%;
+    margin-left: 10%;
+}
+
+a
+{
+    color: black;
+    font-size: 3vw;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+}
+
+li
+{
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    text-align: center;
+}
+
+li :hover
+{
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
+
+ul
+{
+    list-style: none;
+    padding: 0;
+}
+
+#homelink
+{
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+h2
+{
+    font-size: 1.9vw;
+}
+
+html
+{
+    background-color: rgb(40,40,40);
+}
+
+#content
+{
+    background-color: white;
+    color: black;
+    padding: 1vw;
+    border-radius: 5px;
+}

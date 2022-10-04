@@ -1,15 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <head>
     <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}">
 </head>
 
 <body> 
-    <a tag="homelink" href="{% url 'home' %}"><h1>My Pet Adoption Agency</h1></a>
-
-    {% block content %}
-    {% endblock %}
     
+    <a id="homelink" href="{% url 'home' %}"><h1>My Pet Adoption Agency</h1></a>
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
 </body>
 
 </html>
