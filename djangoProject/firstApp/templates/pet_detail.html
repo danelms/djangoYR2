@@ -4,6 +4,12 @@
 
 {%block content%}
 
-
+<h1>Name: {{pet.name|title}}</h1>
+<h2>Age: {{pet.age}}</h2>
+<h2>Sex: {{pet.sex|capfirst}}</h2>
+<h2>Submitter: {{pet.submitter|title}} - Submitted: {{pet.submissionDate}}</h2>
+<h2>Species: {{pet.species|capfirst}}</h2>
+<h2>Breed: {{pet.breed|title}}</h2>
+<h2>Description: {{pet.description|capfirst}}</h2>
 
 {%endblock%}

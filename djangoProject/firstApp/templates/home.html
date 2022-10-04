@@ -7,7 +7,7 @@
 <ul>
     {% for pet in pets %}
     <li>
-        <a href="{% url 'pet_detail' pet.id%"}>{{pet.name|capfirst}}</a>
+        <a href="{% url 'pet_detail' pet.id %}">{{pet.name|capfirst}}</a>
     </li>
     {% endfor %}
 </ul>
