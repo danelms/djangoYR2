@@ -11,5 +11,13 @@
 <h2>Species: {{pet.species|capfirst}}</h2>
 <h2>Breed: {{pet.breed|title}}</h2>
 <h2>Description: {{pet.description|capfirst}}</h2>
+<h2>Vaccinations:</h2>
+{% if pet.vaccinations.all %}
+    {% for v in pet.vaccinations.all %}
+        <li>{{v.name|capfirst}}</li>
+    {% endfor %}
+{% else %}
+<li>NONE</li>
+{% endif %}
 
 {%endblock%}
